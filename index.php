@@ -1,8 +1,4 @@
-<?php
-    // include_once __DIR__.'/movie.php';
-?>
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-</html> -->
+
+<h1>Lista Films:</h1>
 
 
 <?php
@@ -45,7 +40,7 @@ function __construct($_title,  $_cast, $_description){
 public function print(){
     echo 'Titolo Film: '.$this->title.'<br>';
     echo 'Cast: '.$this->cast.'<br>';
-    echo 'Breve descrizione: '.$this->description.'<br><br>';
+    echo 'Breve descrizione: '.substr($this->description, 0, 100).'...<br><br>';
 }
 }
 
@@ -62,8 +57,14 @@ $film2= new Movie('Avenger Endgame',
 
 Basato sul gruppo di supereroi dei Vendicatori di Marvel Comics, il film è il seguito di Avengers: Infinity War (2018) e costituisce il ventiduesimo film del Marvel Cinematic Universe. È prodotto dai Marvel Studios ed è distribuito da Walt Disney Studios Motion Pictures. La sceneggiatura del film è stata scritta da Christopher Markus e Stephen McFeely, e la pellicola comprende un cast corale che include molti degli attori comparsi nei precedenti film del MCU. '  );
 
-var_dump($film1);
-var_dump($film2);
+// var_dump($film1);
+// var_dump($film2);
 
 $film1->print();
 $film2->print();
+
+?>
+    
+</body>
+</html>
+
